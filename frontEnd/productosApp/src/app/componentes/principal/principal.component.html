@@ -1,0 +1,50 @@
+
+<h1> Productos </h1>
+<br>
+
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col" ></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let z of data_prod">
+      <td>{{z.descripcion}}</td>
+      <td>{{z.precio}}</td>
+      <td>{{z.cantidad}}</td>
+      <td> 
+        <button class="btn btn-primary"> Editar </button> 
+        <button class=" ml-1 btn btn-success"> Eliminar </button> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<mat-chip-list>
+    <mat-chip>One fish</mat-chip>
+    <mat-chip>Two fish</mat-chip>
+    <mat-chip color="primary" selected>Primary fish</mat-chip>
+    <mat-chip color="accent" selected>Accent fish</mat-chip>
+  </mat-chip-list>
+  
+  <button mat-button>Click me!</button>
+
+  <button mat-raised-button (click)="openDialog()">Pick one</button>
+
+
+  <!-- <h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->
